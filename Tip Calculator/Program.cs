@@ -24,8 +24,9 @@
                     //format them
                     string formattedTotal = total.ToString("C2");
                     string formattedTip = tip.ToString("C2");
-
-                    Console.WriteLine($"\n{percent*100}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
+                   
+                    //Console.WriteLine($"\n{percent*100}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
+                    Console.WriteLine($"\n{(int)(percent*100)}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
                 }
 
                 Console.Write("Would you like to go again? (y/n): ");
