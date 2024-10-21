@@ -13,17 +13,22 @@
             {
                 Console.Write("Enter cost of meal: ");
                 decimal mealCost = decimal.Parse(Console.ReadLine());
+                //array  of tip percents
+                decimal[] percentages = { 0.15m, 0.20m, 0.25m };
 
-                decimal tip = mealCost * .15m;
-                decimal total = mealCost + tip;
+                foreach (var percent in percentages)
+                {
+                    decimal tip = mealCost * percent;
+                    decimal total = mealCost + tip;
 
-                //format
-                string formattedTotal = total.ToString("C2");
-                string formattedTip = tip.ToString("C2");
+                    //format them
+                    string formattedTotal = total.ToString("C2");
+                    string formattedTip = tip.ToString("C2");
 
-                Console.WriteLine($"Tip amount: {formattedTip}");
-                Console.WriteLine($"TOtal amount: {formattedTotal}");
+                    Console.WriteLine($"\n{percent*100}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
+                }
 
+                Console.Write("Would you like to go again? (y/n): ");
                 choice = Console.ReadLine().ToLower();
             } while (choice == "y");
         }
