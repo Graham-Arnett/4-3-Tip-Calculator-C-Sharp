@@ -25,7 +25,7 @@
                     string formattedTotal = total.ToString("C2");
                     string formattedTip = tip.ToString("C2");
                    
-                    //Console.WriteLine($"\n{percent*100}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
+                 //Displays the results,casts the percent so it appears as an integer, and uses \n for newlines for efficiency instead of having to write several WriteLines
                     Console.WriteLine($"\n{(int)(percent*100)}%\nTip: {formattedTip}\nTotal: {formattedTotal}");
                 }
 
